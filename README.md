@@ -1,7 +1,6 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/UpikIndriani/revinatriadita.github.io/main/assets/images/benerupik.jpg" alt="Upik Indriani Banner" width="100%">
+  <img src="assets/images/benerupik.jpg" alt="Upik Indriani Banner" width="100%">
 </p>
-
 # Haiii! Saya Upik Indriani 👋
 
 ### Electronics Engineering  | Sistem Otomasi & Kontrol
