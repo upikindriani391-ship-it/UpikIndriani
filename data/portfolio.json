@@ -1,13 +1,12 @@
 {
   "profile": {
-    "name": "Nama Anda",
-    "title": "Teknik Elektronika",
+    "name": "Upik Indriani",
+    "title": "Electronics Engineering",
     "tagline": "Merancang dan membangun sistem elektronika — dari rangkaian analog hingga embedded system — dengan presisi dan inovasi.",
     "email": "email@contoh.com",
     "phone": "+62 812 3456 7890",
     "location": "Semarang, Jawa Tengah",
-    "linkedin": "linkedin.com/in/namaanda",
-    "github": "github.com/namaanda"
+    "github": "github.com/UpikIndriani"
   },
 
   "projects": [
