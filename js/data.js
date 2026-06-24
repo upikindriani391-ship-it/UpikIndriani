@@ -4,114 +4,109 @@
 
 const portfolioData = {
   "profile": {
-    "name": "Nama Anda",
-    "title": "Teknik Elektronika",
-    "tagline": "Merancang dan membangun sistem elektronika — dari rangkaian analog hingga embedded system — dengan presisi dan inovasi.",
-    "email": "email@contoh.com",
-    "phone": "+62 812 3456 7890",
-    "location": "Semarang, Jawa Tengah",
-    "linkedin": "linkedin.com/in/namaanda",
-    "github": "github.com/namaanda"
+    "name": "Upik Indriani",
+    "title": "Electronics Engineering",
+    "tagline": "Berfokus pada otomasi industri dan sistem kendali — merancang serta mengembangkan sistem tertanam dengan ketelitian tinggi.",
+    "email": "upikindriani391@gmail.com",
+    "phone": "082324734691",
+    "location": "Pati, Jawa Tengah",
+    "github": "github.com/UpikIndriani",
+    "image": "assets/images/upik.jpg"
   },
 
   "projects": [
     {
       "id": 1,
-      "title": "Sistem Kendali Motor DC Berbasis PID",
-      "description": "Perancangan sistem kendali kecepatan motor DC menggunakan algoritma PID dengan mikrokontroler STM32. Dilengkapi antarmuka serial untuk monitoring real-time.",
-      "tags": ["Embedded C", "STM32", "PID Control", "PCB Design"],
-      "image": "assets/images/project1.jpg"
+      "title": "Prototype Smart Vacuum Cleaner Robot Berbasis Arduino Uno",
+      "description": "Robot penyedot debu otomatis pintar yang bergerak secara otonom. Mengintegrasikan unit input (sensor ultrasonik), unit kontrol (Arduino UNO & Motor Shield), serta unit output (motor DC vakum & motor servo pengarah) guna mendeteksi serta menghindari rintangan secara real-time.",
+      "tags": ["Arduino UNO", "Sensor Ultrasonik", "Motor Shield", "Servo MG995"],
+      "image": "assets/images/vacum.jpg"
     },
     {
       "id": 2,
-      "title": "Alat Ukur Kualitas Udara Portabel",
-      "description": "Perangkat IoT untuk memantau kadar PM2.5, CO2, dan kelembaban menggunakan sensor MQ-135 dan DHT22, ditampilkan via OLED dan dikirim ke dashboard cloud.",
-      "tags": ["Arduino", "IoT", "Sensor Integration", "ESP8266"],
-      "image": "assets/images/project2.jpg"
+      "title": "Sistem Pakan Otomatis Berbasis MATLAB GUI dan Arduino Uno",
+      "description": "Rancangan sistem pemberian pakan otomatis terjadwal menggunakan sensor LDR untuk mendeteksi intensitas cahaya dan motor servo MG995 sebagai penggerak mekanis katup wadah pakan. Dilengkapi fitur Mode Otomatis serta Mode Manual yang dikendalikan langsung secara real-time melalui antarmuka interaktif MATLAB GUI.",
+      "tags": ["MATLAB GUI", "Arduino Uno", "Sensor LDR", "Servo MG995"],
+      "image": "assets/images/projectkbk.jpg"
     },
     {
       "id": 3,
-      "title": "Power Supply Variabel Terregulasi",
-      "description": "Desain power supply lab 0–30V / 3A dengan regulasi tegangan presisi tinggi menggunakan LM723 dan BJT pass transistor. Dilengkapi proteksi arus lebih.",
-      "tags": ["Analog Design", "PCB Layout", "Eagle CAD"],
-      "image": "assets/images/project3.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Robot Line Follower Otomatis",
-      "description": "Robot otomatis berbasis sensor infrared array dengan kontrol PWM untuk motor DC. Mampu mengikuti jalur dengan kecepatan adaptif pada belokan tajam.",
-      "tags": ["Robotika", "AVR", "PWM", "Sensor IR"],
-      "image": "assets/images/project4.jpg"
+      "title": "Robot Power Control & Heater Monitoring System",
+      "description": "Proyek optimalisasi kelistrikan mesin industri yang dikembangkan selama masa magang di CV. Jaya Setya Plastik. Berfokus pada perancangan kendali distribusi daya untuk lengan robot mekanis, serta membangun sistem pemantauan beban pemanas (heater load monitoring) guna mendeteksi anomali arus elektrik secara dini.",
+      "tags": ["PLC Maintenance", "Troubleshooting", "Industrial Control", "Heater Monitoring"],
+      "image": "assets/images/project.instrumen.jpg"
     }
   ],
 
   "skills": [
     {
-      "category": "Embedded System",
+      "category": "Aplikasi Otomasi & Rekayasa",
       "items": [
-        { "name": "STM32 / ARM Cortex", "level": 85 },
-        { "name": "Arduino / AVR", "level": 90 },
-        { "name": "ESP32 / IoT", "level": 80 },
-        { "name": "RTOS (FreeRTOS)", "level": 70 }
+        { "name": "CX Programmer", "level": 90 },
+        { "name": "Pemrograman PLC", "level": 85 },
+        { "name": "Arduino IDE", "level": 92 },
+        { "name": "Proteus", "level": 80 },
+        { "name": "MATLAB", "level": 85 },
+        { "name": "Eagle Software", "level": 88 }
       ]
     },
     {
-      "category": "Desain Elektronika",
+      "category": "Alat Kerja & Desain",
       "items": [
-        { "name": "PCB Design (KiCad/Eagle)", "level": 88 },
-        { "name": "Rangkaian Analog", "level": 82 },
-        { "name": "Simulasi (LTSpice)", "level": 78 },
-        { "name": "Power Electronics", "level": 72 }
+        { "name": "Microsoft Word", "level": 95 },
+        { "name": "Microsoft Excel", "level": 90 },
+        { "name": "Microsoft PowerPoint", "level": 92 },
+        { "name": "Canva", "level": 85 }
       ]
     },
     {
-      "category": "Pemrograman",
+      "category": "Kemampuan Personal & Bahasa",
       "items": [
-        { "name": "Embedded C / C++", "level": 87 },
-        { "name": "Python (Scripting)", "level": 75 },
-        { "name": "MATLAB / Simulink", "level": 70 },
-        { "name": "Assembly (AVR)", "level": 60 }
-      ]
-    },
-    {
-      "category": "Alat & Instrumentasi",
-      "items": [
-        { "name": "Osiloskop Digital", "level": 92 },
-        { "name": "Multimeter & LCR Meter", "level": 95 },
-        { "name": "Spectrum Analyzer", "level": 65 },
-        { "name": "Logic Analyzer", "level": 80 }
+        { "name": "Kerjasama Tim (Teamwork)", "level": 95 },
+        { "name": "Komunikasi Efektif", "level": 90 },
+        { "name": "Analisis Data", "level": 85 },
+        { "name": "Bahasa Indonesia (Native)", "level": 100 },
+        { "name": "Bahasa Inggris (Konversasional)", "level": 75 }
       ]
     }
   ],
 
   "experience": [
     {
-      "period": "2024 – Sekarang",
-      "role": "Electronics Engineer",
-      "company": "PT. Teknologi Maju Indonesia, Semarang",
-      "description": "Merancang dan mengembangkan sistem kontrol berbasis mikrokontroler untuk peralatan industri. Bertanggung jawab atas desain PCB, pengujian, dan dokumentasi teknis.",
+      "period": "2025",
+      "role": "Magang di Divisi Perawatan (Maintenance Division Internship)",
+      "company": "CV. Jaya Setya Plastik",
+      "description": "Melakukan pemeliharaan berkala serta troubleshooting kerusakan pada mesin-mesin produksi industri. Melakukan perbaikan dan perawatan berkala perangkat PLC beserta driver penunjangnya. Berkontribusi aktif dalam pengerjaan proyek sistem kontrol daya robot dan sistem monitoring beban pemanas (heater).",
       "active": true
     },
     {
-      "period": "2023 – 2024",
-      "role": "Embedded Systems Intern",
-      "company": "CV. Inovasi Elektronik, Semarang",
-      "description": "Mengembangkan firmware untuk produk IoT berbasis ESP32. Berkontribusi dalam desain skematik dan layout PCB untuk 3 produk komersial.",
-      "active": false
-    },
-    {
-      "period": "2021 – 2023",
-      "role": "Asisten Laboratorium Elektronika",
-      "company": "Universitas — Jurusan Teknik Elektronika",
-      "description": "Mendampingi praktikum rangkaian analog, digital, dan sistem kendali. Menyusun modul praktikum dan panduan penggunaan instrumen laboratorium.",
+      "period": "November 2024",
+      "role": "Pelatihan Desain & Manufaktur PCB",
+      "company": "PT. Indomaker Indonesia Mandiri",
+      "description": "Mengikuti sertifikasi pelatihan intensif berfokus pada pembuatan skematik jalur sirkuit elektronik menggunakan Eagle Software serta menguasai seluruh alur inti proses manufaktur pencetakan papan PCB.",
       "active": false
     }
   ],
 
+  "education": [
+    {
+      "period": "2023 - 2026",
+      "degree": "D3 Teknik Elektronika",
+      "institution": "Politeknik Negeri Semarang",
+      "description": "Fokus studi mendalam pada rekayasa elektronika industri, sistem otomasi, mikrokontroler, dan sistem kendali kontrol."
+    },
+    {
+      "period": "2020 - 2023",
+      "degree": "Jurusan MIPA (Sains)",
+      "institution": "MA Salafiyah Kajen",
+      "description": "Membangun landasan berpikir analitis yang kuat melalui fokus studi matematika dan ilmu pengetahuan alam."
+    }
+  ],
+
   "contact": {
-    "email": "email@contoh.com",
-    "phone": "+62 812 3456 7890",
-    "location": "Semarang, Jawa Tengah, Indonesia",
-    "linkedin": "https://linkedin.com/in/namaanda"
+    "email": "upikindriani391@gmail.com",
+    "phone": "082324734691",
+    "location": "Pati, Jawa Tengah, Indonesia",
+    "linkedin": "https://linkedin.com/in/upikindriani"
   }
 };
