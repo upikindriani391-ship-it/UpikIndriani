@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upik Indriani | Portofolio Electronics Engineering </title>
+  <title>Upik Indriani | Electronics Engineering</title>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,8 +39,8 @@
       <p class="hero-sub">Seorang teknisi yang termotivasi dan berorientasi pada detail dengan pengalaman praktis dalam pemeliharaan PLC, pemecahan masalah (troubleshooting) mesin industri, dan sistem tertanam (embedded systems).</p>
       
       <div class="hero-actions">
-        <a href="#projects" class="btn-primary">Lihat Karya Saya</a>
-        <a href="assets/docs/cv.pdf" download class="btn-ghost">Unduh CV</a>
+        <a href="#about" class="btn-primary">Lihat Karya Saya</a>
+        <a href="assets/docs/cv.pdf" download="CV_Upik_Indriani.pdf" class="btn-ghost">Unduh CV</a>
       </div>
 
       <div class="hero-meta">
@@ -72,29 +72,70 @@
 
   <section class="section section-alt" id="education">
     <div class="container">
-      <div class="section-header"><span class="section-tag">Edukasi</span><h2 class="section-title">Latar Belakang Pendidikan</h2></div>
+      <div class="section-header">
+        <span class="section-tag">Edukasi</span>
+        <h2 class="section-title">Latar Belakang Pendidikan</h2>
+      </div>
       <div class="timeline" id="educationTimeline"></div>
     </div>
   </section>
 
   <section class="section" id="experience">
     <div class="container">
-      <div class="section-header"><span class="section-tag">Riwayat</span><h2 class="section-title">Pengalaman Kerja (Magang)</h2></div>
+      <div class="section-header">
+        <span class="section-tag">Riwayat</span>
+        <h2 class="section-title">Pengalaman Kerja (Magang)</h2>
+      </div>
       <div class="timeline" id="experienceTimeline"></div>
     </div>
   </section>
 
   <section class="section section-alt" id="skills">
     <div class="container">
-      <div class="section-header"><span class="section-tag">Kompetensi</span><h2 class="section-title">Keahlian Teknis</h2></div>
+      <div class="section-header">
+        <span class="section-tag">Kompetensi</span>
+        <h2 class="section-title">Keahlian Teknis</h2>
+      </div>
       <div class="skills-wrapper" id="skillsWrapper"></div>
     </div>
   </section>
 
   <section class="section" id="training">
     <div class="container">
-      <div class="section-header"><span class="section-tag">Sertifikasi</span><h2 class="section-title">Pelatihan & Pengalaman Khusus</h2></div>
+      <div class="section-header">
+        <span class="section-tag">Sertifikasi</span>
+        <h2 class="section-title">Pelatihan & Pengalaman Khusus</h2>
+      </div>
       <div class="timeline" id="trainingTimeline"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Terhubung</span>
+        <h2 class="section-title">Kontak</h2>
+        <p class="section-desc">Terbuka untuk kolaborasi, diskusi proyek, atau peluang kerja.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" id="contactInfo"></div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input type="text" id="name" placeholder="Nama lengkap Anda" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@contoh.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Kirim Pesan</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -109,3 +150,56 @@
   <script src="js/main.js"></script>
 </body>
 </html>
+const SKILLS_DATA = [
+  {
+    category: "Otomasi Industri & Rekayasa",
+    skills: ["Pemrograman PLC", "CX Programmer", "Arduino IDE", "Proteus", "MATLAB"]
+  },
+  {
+    category: "Aplikasi & Alat Desain",
+    skills: ["Microsoft Word", "Microsoft Excel", "Microsoft PowerPoint", "Canva", "Software Eagle (PCB Design)"]
+  },
+  {
+    category: "Kemampuan Personal & Bahasa",
+    skills: ["Kerjasama Tim", "Komunikasi", "Analisis Data", "Bahasa Indonesia (Native)", "Bahasa Inggris (Konversasional)"]
+  }
+];
+
+const EDUCATION_DATA = [
+  {
+    institution: "Politeknik Negeri Semarang",
+    period: "2023 - 2026",
+    major: "D3 Teknik Elektronika",
+    description: "Fokus studi pada elektronika industri, sistem kendali otomasi, pemrograman PLC, dan mikrokontroler."
+  },
+  {
+    institution: "MA Salafiyah Kajen",
+    period: "2020 - 2023",
+    major: "Jurusan Matematika dan Ilmu Pengetahuan Alam (MIPA)",
+    description: "Lulus dengan fondasi pengetahuan sains, fisika, dan matematika yang kuat."
+  }
+];
+
+const EXPERIENCE_DATA = [
+  {
+    role: "Magang di Divisi Maintenance (Perawatan Mesin)",
+    company: "CV. Jaya Setya Plastik",
+    period: "2025",
+    description: "Melakukan perawatan berkala dan pemecahan masalah (troubleshooting) pada mesin-mesin industri. Memperbaiki serta memelihara modul PLC beserta driver penggerak. Berkontribusi aktif dalam pengerjaan proyek sistem kendali daya robot serta sistem pemantauan beban pemanas (heater monitoring system)."
+  }
+];
+
+const TRAINING_DATA = [
+  {
+    title: "Pelatihan Desain & Manufaktur PCB",
+    organizer: "PT. Indomaker Indonesia Mandiri",
+    period: "November 2024",
+    description: "Mengikuti pelatihan intensif pembuatan skematik dan tata letak (layout) jalur sirkuit PCB menggunakan Eagle Software, serta mempelajari seluruh alur proses utama manufaktur pencetakan papan PCB."
+  }
+];
+
+const CONTACT_DATA = {
+  email: "upikindriani391@gmail.com",
+  phone: "082324734691",
+  address: "Pati, Jawa Tengah, Indonesia"
+};
