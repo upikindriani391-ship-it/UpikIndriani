@@ -3,374 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Upik Indriani — Teknisi Elektronika</title>
+  <title>Upik Indriani | Portofolio Teknik Elektronika</title>
+  <link rel="stylesheet" href="css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav" id="navbar">
-    <div class="nav__brand">
-      <span class="nav__dot"></span>
-      <span>UI</span>
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>Upik<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#projects">Proyek</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+        <a href="assets/docs/cv.pdf" download class="nav-cta">Unduh CV</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <ul class="nav__links">
-      <li><a href="#about">Tentang</a></li>
-      <li><a href="#education">Pendidikan</a></li>
-      <li><a href="#experience">Pengalaman</a></li>
-      <li><a href="#skills">Keahlian</a></li>
-      <li><a href="#training">Pelatihan</a></li>
-      <li><a href="#contact" class="nav__cta">Kontak</a></li>
-    </ul>
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  </header>
 
   <!-- HERO -->
-  <section class="hero" id="home">
-    <canvas id="circuitCanvas"></canvas>
-    <div class="hero__content">
-      <p class="hero__eyebrow">Mahasiswa Teknik Elektronika</p>
-      <h1 class="hero__name">
-        <span class="hero__first">Upik</span>
-        <span class="hero__last">Indriani</span>
-      </h1>
-      <p class="hero__tagline">
-        Otomasi Industri &amp; Sistem Kendali
-        <span class="cursor">|</span>
-      </p>
-      <p class="hero__bio">
-        Seorang teknisi yang termotivasi dan berorientasi pada detail dengan pengalaman praktis dalam pemeliharaan PLC, 
-        pemecahan masalah (*troubleshooting*) mesin industri, dan sistem tertanam (*embedded systems*).
-      </p>
-      <div class="hero__actions">
-        <a href="#experience" class="btn btn--primary">Lihat Karya Saya</a>
-        <a href="assets/CV_Upik.pdf" download class="btn btn--ghost">Unduh CV</a>
-      </div>
-      <div class="hero__meta">
-        <span class="hero__meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Pati, Jawa Tengah
-        </span>
-        <span class="hero__meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13.5a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.06 2.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-          082324734691
-        </span>
+  <section class="hero" id="hero">
+    <canvas class="circuit-canvas" id="circuitCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Electronics Engineering Student</p>
+      <h1 class="hero-title">Halo, saya<br /><span class="hero-name">Upik Indriani</span></h1>
+      <p class="hero-sub">A motivated and detail-oriented individual with a strong interest in industrial automation and control systems. Experienced in troubleshooting industrial machines, maintaining PLCs, and developing control system projects.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Lihat Proyek</a>
+        <a href="#contact" class="btn-ghost">Hubungi Saya</a>
       </div>
     </div>
-    <div class="hero__scroll-hint">
-      <span>gulir</span>
-      <div class="hero__scroll-line"></div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section about" id="about">
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
     <div class="container">
-      <div class="section__label reveal">Tentang Saya</div>
-      <div class="about__grid">
-        <div class="about__text reveal">
-          <h2 class="section__heading">Membangun masa depan<br/><em>sirkuit demi sirkuit.</em></h2>
-          <p>
-            Saya adalah mahasiswa tahun ketiga Teknik Elektronika di Politeknik Negeri Semarang, 
-            yang berfokus pada otomasi industri dan sistem kendali. Passion saya terletak pada 
-            upaya membuat mesin menjadi lebih cerdas — mulai dari pemrograman PLC hingga perancangan sistem tertanam.
-          </p>
-          <p>
-            Melalui pengalaman magang dan pelatihan praktis, saya telah membangun fondasi yang kuat 
-            dalam pemecahan masalah (*troubleshooting*), perbaikan, serta perancangan logika kendali demi 
-            menjaga efisiensi jalannya sistem industri.
-          </p>
-        </div>
-        <div class="about__stats reveal">
-          <div class="stat-card">
-            <span class="stat-card__num">2+</span>
-            <span class="stat-card__label">Tahun Studi</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-card__num">3+</span>
-            <span class="stat-card__label">Proyek Selesai</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-card__num">6+</span>
-            <span class="stat-card__label">Alat Teknis</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-card__num">2</span>
-            <span class="stat-card__label">Bahasa</span>
-          </div>
-        </div>
+      <div class="section-header">
+        <span class="section-tag">Portofolio</span>
+        <h2 class="section-title">Proyek & Karya</h2>
+        <p class="section-desc">Kumpulan proyek elektronika dan otomasi industri yang telah saya kembangkan.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section class="section education" id="education">
-    <div class="container">
-      <div class="section__label reveal">Pendidikan</div>
-      <h2 class="section__heading reveal">Perjalanan Akademik</h2>
-      <div class="timeline">
-        <div class="timeline__item reveal">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <div class="timeline__period">2023 — 2026</div>
-            <h3 class="timeline__title">Politeknik Negeri Semarang</h3>
-            <p class="timeline__sub">D3 Teknik Elektronika</p>
-            <p class="timeline__desc">
-              Mempelajari prinsip dasar elektronika, sistem tertanam, pemrograman PLC, 
-              serta sistem kendali industri.
-            </p>
-            <div class="timeline__tags">
-              <span>PLC</span><span>Sistem Tertanam</span><span>Sistem Kendali</span>
-            </div>
-          </div>
-        </div>
-        <div class="timeline__item reveal">
-          <div class="timeline__dot"></div>
-          <div class="timeline__content">
-            <div class="timeline__period">2020 — 2023</div>
-            <h3 class="timeline__title">MA Salafiyah Kajen</h3>
-            <p class="timeline__sub">Jurusan MIPA</p>
-            <p class="timeline__desc">
-              Membangun fondasi yang kuat dalam bidang sains dan matematika yang memicu 
-              ketertarikan saya pada dunia elektronika dan teknik.
-            </p>
-            <div class="timeline__tags">
-              <span>Sains</span><span>Matematika</span><span>Fisika</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- EXPERIENCE -->
-  <section class="section experience" id="experience">
-    <div class="container">
-      <div class="section__label reveal">Pengalaman</div>
-      <h2 class="section__heading reveal">Pengalaman Kerja</h2>
-      <div class="exp-card reveal">
-        <div class="exp-card__header">
-          <div>
-            <h3 class="exp-card__company">CV. Jaya Setya Plastik</h3>
-            <p class="exp-card__role">Divisi Maintenance — Magang</p>
-          </div>
-          <span class="exp-card__year">2025</span>
-        </div>
-        <ul class="exp-card__list">
-          <li>
-            <span class="exp-card__icon">⚙️</span>
-            Melakukan pemeliharaan preventif dan korektif pada mesin industri untuk meminimalkan 
-            waktu henti (*downtime*) dan memastikan kelancaran kontinuitas produksi.
-          </li>
-          <li>
-            <span class="exp-card__icon">🔧</span>
-            Memperbaiki dan merawat PLC (*Programmable Logic Controllers*) serta motor driver, 
-            mendiagnosis kerusakan, dan memulihkan operasional sistem.
-          </li>
-          <li>
-            <span class="exp-card__icon">🤖</span>
-            Berkontribusi dalam berbagai proyek termasuk sistem kendali daya robot serta solusi 
-            pemantauan beban pemanas (*heater load monitoring*).
-          </li>
-        </ul>
-        <div class="exp-card__footer">
-          <span class="tag">PLC</span>
-          <span class="tag">CX Programmer</span>
-          <span class="tag">Pemeliharaan Mesin</span>
-          <span class="tag">Otomasi Industri</span>
-        </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Diisi otomatis dari js/data.js -->
       </div>
     </div>
   </section>
 
   <!-- SKILLS -->
-  <section class="section skills" id="skills">
+  <section class="section section-alt" id="skills">
     <div class="container">
-      <div class="section__label reveal">Keahlian</div>
-      <h2 class="section__heading reveal">Keahlian Teknis &amp; Personal</h2>
-      <div class="skills__grid">
-        <div class="skill-group reveal">
-          <h4 class="skill-group__title">Perangkat Lunak</h4>
-          <div class="skill-bars">
-            <div class="skill-bar">
-              <div class="skill-bar__label">Arduino IDE</div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill" data-width="82"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar__label">CX Programmer (PLC)</div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill" data-width="75"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar__label">Proteus (Simulasi)</div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill" data-width="70"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar__label">MATLAB</div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill" data-width="65"></div>
-              </div>
-            </div>
-            <div class="skill-bar">
-              <div class="skill-bar__label">Eagle (Desain PCB)</div>
-              <div class="skill-bar__track">
-                <div class="skill-bar__fill" data-width="70"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <h4 class="skill-group__title">Perkantoran &amp; Desain</h4>
-          <div class="skill-icon-grid">
-            <div class="skill-icon-card">
-              <div class="skill-icon-card__icon">📄</div>
-              <span>Microsoft Word</span>
-            </div>
-            <div class="skill-icon-card">
-              <div class="skill-icon-card__icon">📊</div>
-              <span>Microsoft Excel</span>
-            </div>
-            <div class="skill-icon-card">
-              <div class="skill-icon-card__icon">📑</div>
-              <span>PowerPoint</span>
-            </div>
-            <div class="skill-icon-card">
-              <div class="skill-icon-card__icon">🎨</div>
-              <span>Canva</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <h4 class="skill-group__title">Keahlian Personal</h4>
-          <div class="personal-skills">
-            <div class="personal-skill">
-              <div class="personal-skill__icon">🤝</div>
-              <div>
-                <strong>Kerja Sama Tim</strong>
-                <p>Mampu berkolaborasi dengan baik bersama anggota tim lintas divisi</p>
-              </div>
-            </div>
-            <div class="personal-skill">
-              <div class="personal-skill__icon">💬</div>
-              <div>
-                <strong>Komunikasi</strong>
-                <p>Jelas dan efektif dalam berbahasa Indonesia &amp; Inggris</p>
-              </div>
-            </div>
-            <div class="personal-skill">
-              <div class="personal-skill__icon">📈</div>
-              <div>
-                <strong>Analisis Data</strong>
-                <p>Pendekatan analitis dan logis dalam memecahkan masalah</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="section-header">
+        <span class="section-tag">Kompetensi</span>
+        <h2 class="section-title">Keahlian Teknis</h2>
+      </div>
+      <div class="skills-wrapper" id="skillsWrapper">
+        <!-- Diisi otomatis dari js/data.js -->
       </div>
     </div>
   </section>
 
-  <!-- TRAINING -->
-  <section class="section training" id="training">
+  <!-- EXPERIENCE -->
+  <section class="section" id="experience">
     <div class="container">
-      <div class="section__label reveal">Pelatihan &amp; Sertifikat</div>
-      <h2 class="section__heading reveal">Pengembangan Diri</h2>
-      <div class="cert-card reveal">
-        <div class="cert-card__badge">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-          </svg>
-        </div>
-        <div class="cert-card__content">
-          <div class="cert-card__meta">
-            <span class="cert-card__org">PT. Indomaker Indonesia Mandiri</span>
-            <span class="cert-card__date">November 2024</span>
-          </div>
-          <h3 class="cert-card__title">Pelatihan Desain &amp; Manufaktur PCB</h3>
-          <div class="cert-card__items">
-            <div class="cert-card__item">
-              <span class="cert-card__bullet"></span>
-              Pembuatan PCB Menggunakan Perangkat Lunak Eagle — mencakup penangkapan skematik (*schematic capture*), desain tata letak (*layout*), dan pembuatan berkas Gerber.
-            </div>
-            <div class="cert-card__item">
-              <span class="cert-card__bullet"></span>
-              Proses Manufaktur PCB — memahami proses pelarutan (*etching*), pengeboran (*drilling*), dan inspeksi kualitas (*quality inspection*).
-            </div>
-          </div>
-          <div class="cert-card__tags">
-            <span class="tag">Eagle CAD</span>
-            <span class="tag">Desain PCB</span>
-            <span class="tag">Manufaktur</span>
-          </div>
-        </div>
+      <div class="section-header">
+        <span class="section-tag">Riwayat</span>
+        <h2 class="section-title">Pengalaman & Edukasi</h2>
       </div>
+      <div class="timeline" id="timeline">
+        <!-- Diisi otomatis dari js/data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CV DOWNLOAD -->
+  <section class="cv-banner">
+    <div class="container cv-inner">
+      <div>
+        <h3>Tertarik bekerja sama?</h3>
+        <p>Unduh CV lengkap saya untuk informasi lebih detil mengenai kualifikasi saya.</p>
+      </div>
+      <a href="assets/docs/cv.pdf" download class="btn-primary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Unduh CV (PDF)
+      </a>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section class="section contact" id="contact">
+  <section class="section section-alt" id="contact">
     <div class="container">
-      <div class="section__label reveal">Kontak</div>
-      <h2 class="section__heading reveal">Mari Terhubung</h2>
-      <p class="contact__desc reveal">
-        Terbuka untuk peluang magang, kolaborasi, dan proyek-proyek menarik 
-        di bidang elektronika serta otomasi industri.
-      </p>
-      <div class="contact__grid reveal">
-        <a href="mailto:upikindriani391@gmail.com" class="contact-card">
-          <div class="contact-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div class="contact-card__label">Email</div>
-            <div class="contact-card__value">upikindriani391@gmail.com</div>
-          </div>
-        </a>
-        <a href="tel:082324734691" class="contact-card">
-          <div class="contact-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 13.5 19.79 19.79 0 0 1 1.08 4.85 2 2 0 0 1 3.06 2.5h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-          </div>
-          <div>
-            <div class="contact-card__label">Telepon / WhatsApp</div>
-            <div class="contact-card__value">082324734691</div>
-          </div>
-        </a>
-        <div class="contact-card contact-card--static">
-          <div class="contact-card__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div class="contact-card__label">Lokasi</div>
-            <div class="contact-card__value">Pati, Jawa Tengah, Indonesia</div>
-          </div>
+      <div class="section-header">
+        <span class="section-tag">Terhubung</span>
+        <h2 class="section-title">Kontak Saya</h2>
+        <p class="section-desc">Terbuka untuk kolaborasi, diskusi proyek otomasi, atau peluang kerja.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" id="contactInfo">
+          <!-- Diisi otomatis dari js/data.js -->
         </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Nama</label>
+            <input type="text" id="name" placeholder="Nama lengkap Anda" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="email@contoh.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Kirim Pesan</button>
+          <p class="form-note" id="formNote"></p>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <span class="footer__name">Upik Indriani</span>
-        <span class="footer__copy">© 2025 — Portofolio Teknik Elektronika</span>
-        <a href="#home" class="footer__back">↑ Kembali ke atas</a>
-      </div>
+    <div class="container footer-inner">
+      <p class="footer-logo"><span class="logo-bracket">&lt;</span>Upik<span class="logo-bracket">/&gt;</span></p>
+      <p class="footer-copy">© 2026 · Dibuat dengan dedikasi oleh Upik Indriani</p>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
