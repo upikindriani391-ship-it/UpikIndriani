@@ -61,12 +61,22 @@
     </div>
   </section>
 
+  <!-- TENTANG SAYA -->
   <section class="section" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Tentang Saya</span>
-        <h2 class="section-title">Membangun masa depan sirkuit demi sirkuit.</h2>
-        <p style="color: var(--text-muted); margin-top: 1rem; max-width: 800px;">Saya mampu bekerja secara mandiri maupun dalam lingkungan tim, selalu bersemangat untuk mempelajari teknologi baru di bidang elektronika dan siap memberikan solusi inovatif di ranah rekayasa sistem kontrol.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+        <!-- Kolom Foto Profil -->
+        <div style="flex: 1; min-width: 280px; text-align: center;">
+          <img src="assets/images/upik.jpg" alt="Upik Indriani" style="width: 100%; max-width: 300px; height: auto; border-radius: 16px; border: 2px solid var(--accent-cyan); box-shadow: 0 0 25px rgba(0, 242, 254, 0.25); object-fit: cover;">
+        </div>
+        <!-- Kolom Deskripsi -->
+        <div style="flex: 2; min-width: 300px;">
+          <div class="section-header" style="text-align: left; margin-bottom: 0; padding: 0;">
+            <span class="section-tag">Tentang Saya</span>
+            <h2 class="section-title">Membangun masa depan sirkuit demi sirkuit.</h2>
+            <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.6;">Saya mampu bekerja secara mandiri maupun dalam lingkungan tim, selalu bersemangat untuk mempelajari teknologi baru di bidang elektronika dan siap memberikan solusi inovatif di ranah rekayasa sistem kontrol.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -88,7 +98,7 @@
           <span class="timeline-period">2020 - 2023</span>
           <h3 class="timeline-title">Jurusan MIPA (Sains)</h3>
           <p class="timeline-org">MA Salafiyah Kajen</p>
-          <p style="color: var(--text-muted);">Membangun landasan berpikir analitis yang kuat melalui fokus studi matematika dan ilmu pengetahuan alam.</p>
+          <p style="color: var(--text-muted);">Membangun landasan berpikir analitis yang kuat melalui focus studi matematika dan ilmu pengetahuan alam.</p>
         </div>
       </div>
     </div>
@@ -158,6 +168,7 @@
     </div>
   </section>
 
+  <!-- PROYEK / KARYA -->
   <section class="section" id="projects">
     <div class="container">
       <div class="section-header">
@@ -166,46 +177,64 @@
         <p style="color: var(--text-muted); margin-top: 0.5rem;">Daftar implementasi sistem kendali, robotika, dan perangkat pintar yang telah saya kembangkan:</p>
       </div>
       
-      <div class="skills-wrapper" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));">
+      <div class="skills-wrapper" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
         
-        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3);">
-          <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">ROBOTIKA & SISTEM TERTANAM</span>
-          <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main);">Prototype Smart Vacuum Cleaner Robot Berbasis Arduino Uno</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Robot penyedot debu otomatis pintar yang bergerak secara otonom. Mengintegrasikan <strong>Unit Input</strong> (saklar daya & sensor ultrasonik), <strong>Unit Kontrol</strong> (Arduino UNO & Motor Shield), serta <strong>Unit Output</strong> (motor DC vakum, gear motor penggerak roda, dan motor servo pengarah sensor). Setelah saklar aktif, robot secara otomatis menyedot debu lantai sambil memetakan rintangan di sekitarnya guna menentukan arah gerak hindaran terbaik secara real-time.
-          </p>
-          <div class="skills-list">
-            <span class="skill-tag">Arduino UNO</span>
-            <span class="skill-tag">Sensor Ultrasonik</span>
-            <span class="skill-tag">Motor Shield</span>
-            <span class="skill-tag">Servo MG995</span>
+        <!-- PROYEK 1: SMART VACUUM -->
+        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="assets/images/vacum.jpg" alt="Smart Vacuum" style="width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--accent-cyan);">
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">ROBOTIKA & SISTEM TERTANAM</span>
+              <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main); line-height: 1.4;">Prototype Smart Vacuum Cleaner Robot Berbasis Arduino Uno</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.75rem; margin-bottom: 1.5rem; line-height: 1.5;">
+                Robot penyedot debu otomatis pintar yang bergerak secara otonom. Mengintegrasikan <strong>Unit Input</strong> (sensor ultrasonik), <strong>Unit Kontrol</strong> (Arduino UNO), serta <strong>Unit Output</strong> (motor DC vakum & roda) guna menghindari rintangan secara real-time.
+              </p>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">Arduino UNO</span>
+              <span class="skill-tag">Sensor Ultrasonik</span>
+              <span class="skill-tag">Motor Shield</span>
+              <span class="skill-tag">Servo MG995</span>
+            </div>
           </div>
         </div>
 
-        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3);">
-          <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">OTOMASI & ANTARMUKA (GUI)</span>
-          <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main);">Sistem Pakan Otomatis Berbasis MATLAB GUI dan Arduino Uno</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Rancangan sistem pemberian pakan otomatis terjadwal untuk meningkatkan efisiensi peternakan. Menggabungkan sensor LDR untuk mendeteksi intensitas cahaya dan motor servo MG995 sebagai penggerak mekanis katup wadah pakan. Dilengkapi fitur <strong>Mode Otomatis</strong> berbasis jadwal/cahaya serta <strong>Mode Manual</strong> yang dikendalikan langsung secara real-time melalui visual antarmuka interaktif MATLAB GUI.
-          </p>
-          <div class="skills-list">
-            <span class="skill-tag">MATLAB GUI</span>
-            <span class="skill-tag">Arduino Uno</span>
-            <span class="skill-tag">Sensor LDR</span>
-            <span class="skill-tag">Servo MG995</span>
+        <!-- PROYEK 2: SISTEM PAKAN OTOMATIS (GUI) -->
+        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="assets/images/projectkbk.jpg" alt="Sistem Pakan Otomatis MATLAB GUI" style="width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--accent-cyan);">
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">OTOMASI & ANTARMUKA (GUI)</span>
+              <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main); line-height: 1.4;">Sistem Pakan Otomatis Berbasis MATLAB GUI dan Arduino Uno</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.75rem; margin-bottom: 1.5rem; line-height: 1.5;">
+                Rancangan pemberian pakan otomatis terjadwal menggunakan sensor LDR dan servo MG995. Dilengkapi <strong>Mode Otomatis</strong> serta <strong>Mode Manual</strong> yang dikendalikan langsung secara real-time melalui visual antarmuka interaktif MATLAB GUI.
+              </p>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">MATLAB GUI</span>
+              <span class="skill-tag">Arduino Uno</span>
+              <span class="skill-tag">Sensor LDR</span>
+              <span class="skill-tag">Servo MG995</span>
+            </div>
           </div>
         </div>
 
-        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3);">
-          <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">SISTEM KENDALI INDUSTRI</span>
-          <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main);">Robot Power Control & Heater Monitoring System</h3>
-          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
-            Proyek optimalisasi kelistrikan mesin industri yang dikembangkan selama masa magang. Berfokus pada perancangan kendali distribusi daya untuk lengan robot mekanis, serta membangun sistem pemantauan beban pemanas (heater load monitoring) guna mendeteksi anomali arus elektrik secara dini untuk mencegah kegagalan sistem.
-          </p>
-          <div class="skills-list">
-            <span class="skill-tag">PLC Maintenance</span>
-            <span class="skill-tag">Troubleshooting</span>
-            <span class="skill-tag">Industrial Control</span>
+        <!-- PROYEK 3: ROBOT POWER CONTROL -->
+        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="assets/images/project.instrumen.jpg" alt="Robot Power Control" style="width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--accent-cyan);">
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">SISTEM KENDALI INDUSTRI</span>
+              <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main); line-height: 1.4;">Robot Power Control & Heater Monitoring System</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.75rem; margin-bottom: 1.5rem; line-height: 1.5;">
+                Proyek optimalisasi kelistrikan mesin industri saat magang. Berfokus pada perancangan kendali distribusi daya lengan robot mekanis, serta membangun sistem pemantauan beban pemanas guna mencegah kegagalan sistem.
+              </p>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">PLC Maintenance</span>
+              <span class="skill-tag">Troubleshooting</span>
+              <span class="skill-tag">Industrial Control</span>
+            </div>
           </div>
         </div>
 
