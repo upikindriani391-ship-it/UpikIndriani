@@ -1,5 +1,5 @@
 /* ============================================================
-   main.js — Portfolio Interactivity
+   main.js — Portfolio Interactivity (Updated for Real Images)
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +27,8 @@ function initNavbar() {
 function initHamburger() {
   const btn = document.getElementById('hamburger');
   const links = document.querySelector('.nav-links');
+  if (!btn || !links) return;
+  
   btn.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a =>
     a.addEventListener('click', () => links.classList.remove('open'))
@@ -73,7 +75,7 @@ function initCircuitCanvas() {
           ctx.strokeStyle = `rgba(0, 180, 216, ${0.5 - dist / 320})`;
           ctx.lineWidth = 0.8;
           ctx.moveTo(nodes[i].x, nodes[i].y);
-          // Right-angle routing (circuit style)
+          // Right-angle routing (circuit style layout)
           ctx.lineTo(nodes[i].x, nodes[j].y);
           ctx.lineTo(nodes[j].x, nodes[j].y);
           ctx.stroke();
@@ -102,34 +104,45 @@ function initCircuitCanvas() {
   draw();
 }
 
-/* ── RENDER PROJECTS ── */
+/* ── RENDER PROJECTS (SINKRON DENGAN GAMBAR DATA.JS) ── */
 function renderProjects() {
   const grid = document.getElementById('projectsGrid');
-  if (!grid) return;
+  if (!grid || !portfolioData || !portfolioData.projects) return;
+
+  grid.innerHTML = ''; // Membersihkan grid bawaan template sebelum render data asli
 
   portfolioData.projects.forEach((p, i) => {
     const card = document.createElement('div');
     card.className = 'project-card reveal';
     card.style.transitionDelay = `${i * 0.08}s`;
+    card.style.display = 'flex';
+    card.style.flexDirection = 'column';
+    card.style.overflow = 'hidden';
 
-    const imgHtml = `
-      <div class="project-img-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
-          <rect x="2" y="3" width="20" height="14" rx="2"/>
-          <path d="M8 21h8M12 17v4"/>
-          <circle cx="7" cy="10" r="1.5"/>
-          <path d="M10 10h7M10 7h4"/>
-        </svg>
-      </div>`;
+    // MEMANGGIL FOTO ASLI: Jika ada properti image, pasang tag img, jika kosong pakai fallback icon SVG
+    const imgHtml = p.image 
+      ? `<div class="project-img-container" style="width:100%; height:200px; overflow:hidden; border-bottom:2px solid var(--accent-cyan, #00b4d8);">
+           <img src="${p.image}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover; display:block;">
+         </div>`
+      : `<div class="project-img-placeholder">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 17v4"/>
+            <circle cx="7" cy="10" r="1.5"/>
+            <path d="M10 10h7M10 7h4"/>
+          </svg>
+         </div>`;
 
     const tagsHtml = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
 
     card.innerHTML = `
       ${imgHtml}
-      <div class="project-body">
-        <div class="project-tags">${tagsHtml}</div>
-        <h3 class="project-title">${p.title}</h3>
-        <p class="project-desc">${p.description}</p>
+      <div class="project-body" style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+        <div>
+          <div class="project-tags" style="margin-bottom: 0.75rem;">${tagsHtml}</div>
+          <h3 class="project-title" style="margin-top: 0.5rem; font-size: 1.25rem; line-height: 1.4;">${p.title}</h3>
+          <p class="project-desc" style="margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.5; color: var(--text-muted);">${p.description}</p>
+        </div>
       </div>`;
 
     grid.appendChild(card);
@@ -139,7 +152,9 @@ function renderProjects() {
 /* ── RENDER SKILLS ── */
 function renderSkills() {
   const wrapper = document.getElementById('skillsWrapper');
-  if (!wrapper) return;
+  if (!wrapper || !portfolioData || !portfolioData.skills) return;
+
+  wrapper.innerHTML = '';
 
   portfolioData.skills.forEach((group, i) => {
     const div = document.createElement('div');
@@ -168,7 +183,9 @@ function renderSkills() {
 /* ── RENDER EXPERIENCE ── */
 function renderExperience() {
   const timeline = document.getElementById('timeline');
-  if (!timeline) return;
+  if (!timeline || !portfolioData || !portfolioData.experience) return;
+
+  timeline.innerHTML = '';
 
   portfolioData.experience.forEach((exp, i) => {
     const item = document.createElement('div');
@@ -187,7 +204,9 @@ function renderExperience() {
 /* ── RENDER CONTACT ── */
 function renderContact() {
   const info = document.getElementById('contactInfo');
-  if (!info) return;
+  if (!info || !portfolioData || !portfolioData.contact) return;
+  
+  info.innerHTML = '';
   const c = portfolioData.contact;
 
   const items = [
@@ -205,26 +224,17 @@ function renderContact() {
       icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>`,
       label: 'Lokasi',
       value: c.location
-    },
-    {
-      icon: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>`,
-      label: 'LinkedIn',
-      value: 'Lihat Profil →',
-      href: c.linkedin
     }
   ];
 
   items.forEach(item => {
     const div = document.createElement('div');
     div.className = 'contact-item reveal';
-    const valueHtml = item.href
-      ? `<a href="${item.href}" target="_blank" class="contact-item-value" style="color:var(--accent-dim)">${item.value}</a>`
-      : `<p class="contact-item-value">${item.value}</p>`;
     div.innerHTML = `
       <div class="contact-icon">${item.icon}</div>
       <div>
         <p class="contact-item-label">${item.label}</p>
-        ${valueHtml}
+        <p class="contact-item-value">${item.value}</p>
       </div>`;
     info.appendChild(div);
   });
@@ -273,8 +283,12 @@ function initContactForm() {
     btn.disabled = true;
 
     setTimeout(() => {
-      note.textContent = '✓ Pesan terkirim! Saya akan segera menghubungi Anda.';
-      note.style.color = 'var(--accent-dim)';
+      if (note) {
+        note.textContent = '✓ Pesan terkirim! Saya akan segera menghubungi Anda.';
+        note.style.color = 'var(--accent-dim, #00b4d8)';
+      } else {
+        alert('✓ Pesan terkirim! Saya akan segera menghubungi Anda.');
+      }
       form.reset();
       btn.textContent = 'Kirim Pesan';
       btn.disabled = false;
