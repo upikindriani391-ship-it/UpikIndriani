@@ -1,353 +1,83 @@
 /* ============================================
-   UPIK INDRIANI — DARK NAVY & CYAN THEME
+   UPIK INDRIANI — MODERN BABY YELLOW THEME
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
 
-/* ---------- Variables ---------- */
 :root {
-  /* Colors */
-  --bg-main: #0a101e;       /* Latar belakang utama (Dark Navy) */
-  --bg-card: #111a2f;       /* Latar belakang kartu */
-  --bg-card-hover: #16223d; /* Latar belakang kartu saat di-hover */
+  /* Colors - Baby Yellow Theme */
+  --bg-main: #0a1128;
+  --bg-card: #0f172a;
+  --bg-card-hover: #1e293b;
   
-  --accent: #00e5ff;        /* Warna utama tombol dan aksen (Cyan) */
-  --accent-hover: #00b8cc;  /* Warna cyan saat di-hover */
-  --accent-transparent: rgba(0, 229, 255, 0.1);
+  --accent: #fdfd96; /* Baby Yellow */
+  --accent-hover: #eaea8a;
+  --accent-transparent: rgba(253, 253, 150, 0.1);
   
-  --text-main: #ffffff;     /* Teks putih utama */
-  --text-muted: #8892b0;    /* Teks paragraf abu-abu kebiruan */
-  --text-light: #ccd6f6;    /* Teks sub-judul terang */
+  --text-main: #ffffff;
+  --text-muted: #a0aec0;
+  --text-light: #f7fafc;
 
-  /* Typography */
   --font-sans: 'Inter', sans-serif;
   --font-display: 'Space Grotesk', sans-serif;
-
-  /* Layout */
-  --max-width: 1100px;
-  --transition: all 0.3s ease-in-out;
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ---------- Reset & Base ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: var(--bg-main); color: var(--text-main); font-family: var(--font-sans); overflow-x: hidden; }
 
-html {
-  scroll-behavior: smooth;
-}
+/* Navigation */
+.navbar { position: fixed; top: 0; width: 100%; padding: 1.5rem 0; background: rgba(10, 17, 40, 0.8); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(253, 253, 150, 0.1); }
+.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-link { color: var(--text-light); font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
+.nav-link:hover { color: var(--accent); }
 
-body {
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  font-family: var(--font-sans);
-  line-height: 1.6;
-  overflow-x: hidden;
-}
+/* Hero Section */
+.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 0 2rem; }
+.hero-content { max-width: 700px; text-align: center; }
+.hero-title { font-size: clamp(3rem, 8vw, 5.5rem); color: var(--text-light); line-height: 1.1; margin-bottom: 1rem; }
+.hero-subtitle { font-size: 1.5rem; color: var(--accent); margin-bottom: 2rem; }
+.hero-cta { display: flex; gap: 1rem; justify-content: center; }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+/* Tombol */
+.btn { padding: 0.8rem 1.8rem; border-radius: 8px; font-weight: 600; transition: var(--transition); cursor: pointer; }
+.btn-primary { background: var(--accent); color: #000; }
+.btn-primary:hover { transform: translateY(-5px); box-shadow: 0 10px 20px var(--accent-transparent); }
+.btn-outline { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
+.btn-outline:hover { background: var(--accent-transparent); transform: translateY(-5px); }
 
-ul {
-  list-style: none;
-}
-
-/* ---------- Typography ---------- */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  color: var(--text-light);
-}
-
-p {
-  color: var(--text-muted);
-}
-
-/* ---------- Navigation Bar ---------- */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 1.5rem 0;
-  background-color: rgba(10, 16, 30, 0.9);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.nav-container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-}
-
-.nav-logo span {
-  color: var(--accent);
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-}
-
-.nav-link {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  font-weight: 500;
+/* About Section & Photo */
+.about-wrapper { display: flex; align-items: center; gap: 4rem; padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+.about-img {
+  width: 280px !important; height: 280px !important;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  object-fit: cover;
+  box-shadow: 0 15px 30px var(--accent-transparent);
   transition: var(--transition);
 }
+.about-img:hover { transform: scale(1.05); }
 
-.nav-link:hover {
-  color: var(--accent);
+/* Education & Project Cards */
+.section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
+.project-card { background: var(--bg-card); border-radius: 12px; transition: var(--transition); border: 1px solid rgba(253, 253, 150, 0.1); padding: 1.8rem; }
+.project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); border-color: var(--accent); }
+
+.institution-logo {
+  width: 50px !important; height: 50px !important;
+  background: white; padding: 5px; border-radius: 8px; object-fit: contain;
 }
 
-/* ---------- Buttons ---------- */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.8rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: var(--transition);
-  cursor: pointer;
-  border: 2px solid transparent;
-}
-
-.btn-primary {
-  background-color: var(--accent);
-  color: var(--bg-main);
-  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
-}
-
-.btn-primary:hover {
-  background-color: var(--accent-hover);
-  box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background-color: transparent;
-  color: var(--accent);
-  border-color: var(--accent);
-}
-
-.btn-outline:hover {
-  background-color: var(--accent-transparent);
-  transform: translateY(-2px);
-}
-
-/* Custom styling untuk tombol Kontak di Navbar */
-.nav-btn {
-  padding: 0.6rem 1.5rem;
-}
-
-/* ---------- Hero Section ---------- */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-  position: relative;
-}
-
-.hero-content {
-  max-width: 700px;
-  margin-top: 5rem;
-}
-
-.hero-tagline {
-  color: var(--accent);
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
-
-.hero-title {
-  font-size: clamp(3rem, 8vw, 5.5rem);
-  line-height: 1.1;
-  margin-bottom: 1rem;
-}
-
-.hero-title .solid-text {
-  display: block;
-  color: var(--text-main);
-}
-
-.hero-title .outline-text {
-  display: block;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--accent);
-}
-
-.hero-subtitle {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
-  color: var(--accent);
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-}
-
-.hero-desc {
-  font-size: 1.05rem;
-  max-width: 600px;
-  margin-bottom: 2.5rem;
-  line-height: 1.8;
-}
-
-.hero-cta {
-  display: flex;
-  gap: 1.5rem;
-}
-
+/* Fixed Scroll Indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.scroll-line {
-  width: 1px;
-  height: 30px;
-  background-color: var(--accent);
-}
-
-/* ---------- Projects Section ---------- */
-.section {
-  padding: 6rem 2rem;
-  max-width: var(--max-width);
-  margin: 0 auto;
-}
-
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 3rem;
+  bottom: 30px;
+  width: 100%;
   text-align: center;
-}
-
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background-color: var(--bg-card);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: var(--transition);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  background-color: var(--bg-card-hover);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-
-.project-img-wrapper {
-  width: 100%;
-  height: 220px;
-  overflow: hidden;
-  border-bottom: 3px solid var(--accent); /* Garis cyan di bawah gambar */
-}
-
-.project-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.project-card:hover .project-img-wrapper img {
-  transform: scale(1.05);
-}
-
-.project-content {
-  padding: 1.8rem;
-}
-
-.project-category {
   color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 0.8rem;
-  display: block;
+  z-index: 10;
 }
-
-.project-title {
-  font-size: 1.3rem;
-  color: var(--text-light);
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-.project-desc {
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-.project-tag {
-  color: var(--accent);
-  background-color: rgba(0, 229, 255, 0.05);
-  border: 1px solid rgba(0, 229, 255, 0.2);
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-family: var(--font-display);
-  font-weight: 600;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none; /* Sembunyikan menu di mobile, bisa ditambahkan hamburger menu nanti */
-  }
-  
-  .hero-cta {
-    flex-direction: column;
-  }
-  
-  .hero-title {
-    font-size: 3.5rem;
-  }
-}
+.scroll-line { width: 1px; height: 40px; background: var(--accent); margin: 0 auto; }
