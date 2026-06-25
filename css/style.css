@@ -1,41 +1,43 @@
 /* ============================================
    UPIK INDRIANI — MODERN BABY YELLOW THEME
    ============================================ */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap');
 
 :root {
-  --bg-main: #0a1128;
-  --bg-card: #0f172a;
-  --accent: #fdfd96; /* Baby Yellow */
-  --text-main: #ffffff;
-  --text-muted: #a0aec0;
+  /* Tema Baby Yellow */
+  --bg-main: #fdfd96;          /* Background Utama */
+  --bg-card: #f9f9b5;          /* Background Kartu (sedikit lebih gelap dari bg) */
+  --text-main: #2d3436;        /* Teks Gelap agar kontras */
+  --accent: #d6b400;          /* Warna aksen untuk border & detail */
+  --accent-transparent: rgba(214, 180, 0, 0.1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background-color: var(--bg-main); color: var(--text-main); font-family: 'Inter', sans-serif; }
 
-/* Hero & Typing Animation */
-.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-.hero-title { font-size: 5rem; line-height: 1; color: var(--text-main); margin-bottom: 1rem; }
-.hero-title span { color: transparent; -webkit-text-stroke: 2px var(--accent); }
-.hero-subtitle { font-size: 1.5rem; color: var(--accent); height: 2rem; }
-.typed-text { border-right: 2px solid var(--accent); white-space: nowrap; overflow: hidden; animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite; }
+/* Navbar */
+.navbar { position: fixed; top: 0; width: 100%; padding: 1.5rem 0; background: rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid var(--accent); }
+.nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; padding: 0 2rem; }
+.nav-links a { margin-left: 20px; text-decoration: none; color: var(--text-main); font-weight: 600; }
 
-@keyframes typing { from { width: 0 } to { width: 100% } }
-@keyframes blink { from, to { border-color: transparent } 50% { border-color: var(--accent) } }
+/* Hero */
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem; }
+.hero-title { font-size: 4rem; line-height: 1.1; color: var(--text-main); }
+.hero-title span { color: transparent; -webkit-text-stroke: 1.5px var(--text-main); }
+.hero-subtitle { font-size: 1.2rem; color: var(--accent); margin: 1rem 0; font-weight: 600; }
+.contact-info { margin: 1rem 0; font-size: 0.9rem; line-height: 1.6; }
 
-/* About - Foto Proporsional */
-.about-wrapper { display: flex; align-items: center; justify-content: center; gap: 3rem; padding: 4rem 2rem; }
-.about-img { width: 200px !important; height: 200px !important; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; }
+/* Tombol */
+.btn { padding: 10px 25px; border-radius: 50px; border: 2px solid var(--text-main); background: transparent; font-weight: 700; cursor: pointer; transition: 0.3s; margin: 5px; }
+.btn:hover { background: var(--text-main); color: var(--bg-main); }
 
-/* Pendidikan - Timeline */
+/* About & Pendidikan */
 .section { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
-.education-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: var(--bg-card); border-left: 4px solid var(--accent); border-radius: 8px; margin-bottom: 1.5rem; }
+.about-img { width: 200px; height: 200px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; margin-bottom: 1rem; }
+
+.education-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: var(--bg-card); border-left: 4px solid var(--accent); border-radius: 8px; margin-bottom: 1rem; }
 .institution-logo { width: 50px; height: 50px; background: white; padding: 5px; border-radius: 8px; object-fit: contain; }
 
 /* Proyek */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
-.project-card { background: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid rgba(253, 253, 150, 0.1); }
-.project-img-wrapper img { width: 100%; height: 200px; object-fit: cover; }
-.project-content { padding: 1.5rem; }
+.project-card { background: var(--bg-card); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--accent); }
