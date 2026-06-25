@@ -1,4 +1,227 @@
-<!-- PROYEK 3: ROBOT POWER CONTROL -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upik Indriani | Electronics Engineering</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-dot"></span>UI
+      </a>
+      <nav class="nav-links">
+        <a href="#about">Tentang</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Proyek Karya</a>
+        <a href="#contact" class="nav-cta">Kontak</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero" id="hero">
+    <canvas class="circuit-canvas" id="circuitCanvas"></canvas>
+    <div class="hero-content">
+      <p class="hero-eyebrow">ELECTRONICS ENGINEERING</p>
+      <h1 class="hero-title">Upik<br /><span class="hero-name-outlined">Indriani</span></h1>
+      <p class="hero-subtitle-job">Industrial Automation & Control Systems|</p>
+      <p class="hero-sub">Seorang individu yang bermotivasi tinggi dan berorientasi pada detail dengan ketertarikan kuat pada otomasi industri dan sistem kendali. Memiliki pengalaman praktis dalam troubleshooting mesin industri, pemeliharaan PLC, serta pengembangan proyek sistem kontrol.</p>
+      
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">Lihat Karya Saya</a>
+        <!-- Perbaikan Link Unduh CV yang Valid -->
+        <a href="assets/docs/cv.upik.pdf" download="CV_Upik_Indriani.pdf" class="btn-ghost">Unduh CV</a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Pati, Jawa Tengah</span>
+        </div>
+        <div class="meta-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          <span>082324734691</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-scroll-hint">
+      <span>gulir</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- TENTANG SAYA -->
+  <section class="section" id="about">
+    <div class="container">
+      <div style="display: flex; flex-wrap: wrap; gap: 3rem; align-items: center;">
+        <!-- Kolom Foto Profil -->
+        <div style="flex: 1; min-width: 280px; text-align: center;">
+          <img src="assets/images/upp.jpg" alt="Upik Indriani" style="width: 100%; max-width: 300px; height: auto; border-radius: 16px; border: 2px solid var(--accent-cyan); box-shadow: 0 0 25px rgba(0, 242, 254, 0.25); object-fit: cover;">
+        </div>
+        <!-- Kolom Deskripsi -->
+        <div style="flex: 2; min-width: 300px;">
+          <div class="section-header" style="text-align: left; margin-bottom: 0; padding: 0;">
+            <span class="section-tag">Tentang Saya</span>
+            <h2 class="section-title">Membangun masa depan sirkuit demi sirkuit.</h2>
+            <p style="color: var(--text-muted); margin-top: 1rem; line-height: 1.6;">Saya mampu bekerja secara mandiri maupun dalam lingkungan tim, selalu bersemangat untuk mempelajari teknologi baru di bidang elektronika dan siap memberikan solusi inovatif di ranah rekayasa sistem kontrol.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Edukasi</span>
+        <h2 class="section-title">Latar Belakang Pendidikan</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-period">2023 - 2026</span>
+          <h3 class="timeline-title">D3 Teknik Elektronika</h3>
+          <p class="timeline-org">Politeknik Negeri Semarang</p>
+          <p style="color: var(--text-muted);">Fokus studi mendalam pada rekayasa elektronika industri, sistem otomasi, mikrokontroler, dan sistem kendali kontrol.</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-period">2020 - 2023</span>
+          <h3 class="timeline-title">Jurusan MIPA (Sains)</h3>
+          <p class="timeline-org">MA Salafiyah Kajen</p>
+          <p style="color: var(--text-muted);">Membangun landasan berpikir analitis yang kuat melalui focus studi matematika dan ilmu pengetahuan alam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Riwayat Kerja & Pelatihan</span>
+        <h2 class="section-title">Pengalaman Profesional</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="timeline-period">2025</span>
+          <h3 class="timeline-title">Magang di Divisi Perawatan (Maintenance Division Internship)</h3>
+          <p class="timeline-org">CV. Jaya Setya Plastik</p>
+          <p style="color: var(--text-muted);">Melakukan pemeliharaan berkala serta troubleshooting kerusakan pada mesin-mesin produksi industri. Melakukan perbaikan dan perawatan berkala perangkat PLC beserta driver penunjangnya. Berkontribusi aktif dalam pengerjaan proyek sistem kontrol daya robot dan sistem monitoring beban pemanas (heater).</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-period">November 2024</span>
+          <h3 class="timeline-title">Pelatihan Desain & Manufaktur PCB (PCB Design & Manufacturing Training)</h3>
+          <p class="timeline-org">PT. Indomaker Indonesia Mandiri</p>
+          <p style="color: var(--text-muted);">Mengikuti sertifikasi pelatihan intensif berfokus pada pembuatan skematik jalur sirkuit elektronik menggunakan Eagle Software serta menguasai seluruh alur inti proses manufaktur pencetakan papan PCB.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Kompetensi</span>
+        <h2 class="section-title">Keahlian Teknis</h2>
+      </div>
+      <div class="skills-wrapper">
+        <div class="skills-category">
+          <h3>Aplikasi Otomasi & Rekayasa</h3>
+          <div class="skills-list">
+            <span class="skill-tag">CX Programmer</span>
+            <span class="skill-tag">Pemrograman PLC</span>
+            <span class="skill-tag">Arduino IDE</span>
+            <span class="skill-tag">Proteus</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Eagle Software</span>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3>Alat Kerja & Desain</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Microsoft Word</span>
+            <span class="skill-tag">Microsoft Excel</span>
+            <span class="skill-tag">Microsoft PowerPoint</span>
+            <span class="skill-tag">Canva</span>
+          </div>
+        </div>
+        <div class="skills-category">
+          <h3>Kemampuan Personal & Bahasa</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Kerjasama Tim (Teamwork)</span>
+            <span class="skill-tag">Komunikasi Efektif</span>
+            <span class="skill-tag">Analisis Data</span>
+            <span class="skill-tag">Bahasa Indonesia (Native)</span>
+            <span class="skill-tag">Bahasa Inggris (Konversasional)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYEK / KARYA -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portofolio</span>
+        <h2 class="section-title">Proyek Unggulan</h2>
+        <p style="color: var(--text-muted); margin-top: 0.5rem;">Daftar implementasi sistem kendali, robotika, dan perangkat pintar yang telah saya kembangkan:</p>
+      </div>
+      
+      <div class="skills-wrapper" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
+        
+        <!-- PROYEK 1: SMART VACUUM CLEANER -->
+        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <!-- Disesuaikan dengan nama file gambar vacuum asli -->
+          <img src="assets/images/vacum.jpg" alt="Smart Vacuum Cleaner" style="width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--accent-cyan);">
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">ROBOTIKA & SISTEM TERTANAM</span>
+              <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main); line-height: 1.4;">Prototype Smart Vacuum Cleaner Robot Berbasis Arduino Uno</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.75rem; margin-bottom: 1.5rem; line-height: 1.5;">
+                Robot penyedot debu otomatis pintar yang bergerak secara otonom. Mengintegrasikan <strong>Unit Input</strong> (sensor ultrasonik), <strong>Unit Kontrol</strong> (Arduino UNO), serta <strong>Unit Output</strong> (motor DC vakum & roda) guna menghindari rintangan secara real-time.
+              </p>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">Arduino UNO</span>
+              <span class="skill-tag">Sensor Ultrasonik</span>
+              <span class="skill-tag">Motor Shield</span>
+              <span class="skill-tag">Servo MG995</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROYEK 2: SISTEM PAKAN OTOMATIS (GUI) -->
+        <div class="skills-category" style="background: rgba(16, 31, 66, 0.3); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+          <img src="assets/images/projectkbk.jpg" alt="Sistem Pakan Otomatis MATLAB GUI" style="width: 100%; height: 220px; object-fit: cover; border-bottom: 2px solid var(--accent-cyan);">
+          <div style="padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--accent-cyan); font-family: var(--font-title); font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;">OTOMASI & ANTARMUKA (GUI)</span>
+              <h3 style="margin-top: 0.5rem; font-size: 1.3rem; color: var(--text-main); line-height: 1.4;">Sistem Pakan Otomatis Berbasis MATLAB GUI dan Arduino Uno</h3>
+              <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.75rem; margin-bottom: 1.5rem; line-height: 1.5;">
+                Rancangan pemberian pakan otomatis terjadwal menggunakan sensor LDR dan servo MG995. Dilengkapi <strong>Mode Otomatis</strong> serta <strong>Mode Manual</strong> yang dikendalikan langsung secara real-time melalui visual antarmuka interaktif MATLAB GUI.
+              </p>
+            </div>
+            <div class="skills-list">
+              <span class="skill-tag">MATLAB GUI</span>
+              <span class="skill-tag">Arduino Uno</span>
+              <span class="skill-tag">Sensor LDR</span>
+              <span class="skill-tag">Servo MG995</span>
+            </div>
+          </div>
+        </div>
+
+       <!-- PROYEK 3: ROBOT POWER CONTROL -->
         <div class="skills-category" style="background: rgba(16, 31, 66, 0.3); padding: 0; overflow: hidden; display: flex; flex-direction: column;">
           
           <!-- KONTANER DUA FOTO BERSEBELAHAN (LENGAN ROBOT & MESIN INJECT) -->
@@ -22,3 +245,39 @@
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hubungi Saya</span>
+        <h2 class="section-title">Mari Berkolaborasi</h2>
+        <p class="section-desc" style="color: var(--text-muted);">Terbuka untuk peluang kerja, diskusi proyek otomasi, maupun kolaborasi rekayasa teknologi.</p>
+      </div>
+      <div class="skills-wrapper" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <div class="skills-category">
+          <h3>Saluran Kontak</h3>
+          <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> upikindriani391@gmail.com</p>
+          <p style="margin-bottom: 0.5rem;"><strong>Telepon:</strong> 082324734691</p>
+          <p><strong>Alamat:</strong> Pati, Jawa Tengah, Indonesia</p>
+        </div>
+        <form class="skills-category" style="display: flex; flex-direction: column; gap: 1rem;" onsubmit="event.preventDefault(); alert('Pesan berhasil terkirim! (Simulasi)');">
+          <input type="text" placeholder="Nama Anda" required style="padding: 0.6rem; border-radius: 6px; border: 1px solid rgba(148,163,184,0.2); background: #0a1128; color: white;" />
+          <input type="email" placeholder="Email Anda" required style="padding: 0.6rem; border-radius: 6px; border: 1px solid rgba(148,163,184,0.2); background: #0a1128; color: white;" />
+          <textarea placeholder="Pesan Anda..." rows="3" required style="padding: 0.6rem; border-radius: 6px; border: 1px solid rgba(148,163,184,0.2); background: #0a1128; color: white; resize: none;"></textarea>
+          <button type="submit" class="btn-primary" style="padding: 0.6rem; font-size: 0.95rem; cursor: pointer;">Kirim Pesan</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 · Upik Indriani · Portofolio Teknik Elektronika · Dibuat dengan dedikasi tinggi</p>
+    </div>
+  </footer>
+
+</body>
+</html>
