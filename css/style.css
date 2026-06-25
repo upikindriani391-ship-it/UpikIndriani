@@ -2,82 +2,40 @@
    UPIK INDRIANI — MODERN BABY YELLOW THEME
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap');
 
 :root {
-  /* Colors - Baby Yellow Theme */
   --bg-main: #0a1128;
   --bg-card: #0f172a;
-  --bg-card-hover: #1e293b;
-  
   --accent: #fdfd96; /* Baby Yellow */
-  --accent-hover: #eaea8a;
-  --accent-transparent: rgba(253, 253, 150, 0.1);
-  
   --text-main: #ffffff;
   --text-muted: #a0aec0;
-  --text-light: #f7fafc;
-
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
-  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Reset & Base */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background-color: var(--bg-main); color: var(--text-main); font-family: var(--font-sans); overflow-x: hidden; }
+body { background-color: var(--bg-main); color: var(--text-main); font-family: 'Inter', sans-serif; }
 
-/* Navigation */
-.navbar { position: fixed; top: 0; width: 100%; padding: 1.5rem 0; background: rgba(10, 17, 40, 0.8); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid rgba(253, 253, 150, 0.1); }
-.nav-container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { font-size: 1.5rem; font-weight: 700; color: var(--accent); }
-.nav-links { display: flex; gap: 2rem; align-items: center; }
-.nav-link { color: var(--text-light); font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
-.nav-link:hover { color: var(--accent); }
+/* Hero & Typing Animation */
+.hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.hero-title { font-size: 5rem; line-height: 1; color: var(--text-main); margin-bottom: 1rem; }
+.hero-title span { color: transparent; -webkit-text-stroke: 2px var(--accent); }
+.hero-subtitle { font-size: 1.5rem; color: var(--accent); height: 2rem; }
+.typed-text { border-right: 2px solid var(--accent); white-space: nowrap; overflow: hidden; animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite; }
 
-/* Hero Section */
-.hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; padding: 0 2rem; }
-.hero-content { max-width: 700px; text-align: center; }
-.hero-title { font-size: clamp(3rem, 8vw, 5.5rem); color: var(--text-light); line-height: 1.1; margin-bottom: 1rem; }
-.hero-subtitle { font-size: 1.5rem; color: var(--accent); margin-bottom: 2rem; }
-.hero-cta { display: flex; gap: 1rem; justify-content: center; }
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { from, to { border-color: transparent } 50% { border-color: var(--accent) } }
 
-/* Tombol */
-.btn { padding: 0.8rem 1.8rem; border-radius: 8px; font-weight: 600; transition: var(--transition); cursor: pointer; }
-.btn-primary { background: var(--accent); color: #000; }
-.btn-primary:hover { transform: translateY(-5px); box-shadow: 0 10px 20px var(--accent-transparent); }
-.btn-outline { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
-.btn-outline:hover { background: var(--accent-transparent); transform: translateY(-5px); }
+/* About - Foto Proporsional */
+.about-wrapper { display: flex; align-items: center; justify-content: center; gap: 3rem; padding: 4rem 2rem; }
+.about-img { width: 200px !important; height: 200px !important; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; }
 
-/* About Section & Photo */
-.about-wrapper { display: flex; align-items: center; gap: 4rem; padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
-.about-img {
-  width: 280px !important; height: 280px !important;
-  border-radius: 50%;
-  border: 4px solid var(--accent);
-  object-fit: cover;
-  box-shadow: 0 15px 30px var(--accent-transparent);
-  transition: var(--transition);
-}
-.about-img:hover { transform: scale(1.05); }
+/* Pendidikan - Timeline */
+.section { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; }
+.education-item { display: flex; align-items: center; gap: 1.5rem; padding: 1.5rem; background: var(--bg-card); border-left: 4px solid var(--accent); border-radius: 8px; margin-bottom: 1.5rem; }
+.institution-logo { width: 50px; height: 50px; background: white; padding: 5px; border-radius: 8px; object-fit: contain; }
 
-/* Education & Project Cards */
-.section { padding: 4rem 2rem; max-width: 1100px; margin: 0 auto; }
-.project-card { background: var(--bg-card); border-radius: 12px; transition: var(--transition); border: 1px solid rgba(253, 253, 150, 0.1); padding: 1.8rem; }
-.project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); border-color: var(--accent); }
-
-.institution-logo {
-  width: 50px !important; height: 50px !important;
-  background: white; padding: 5px; border-radius: 8px; object-fit: contain;
-}
-
-/* Fixed Scroll Indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
-  text-align: center;
-  color: var(--accent);
-  z-index: 10;
-}
-.scroll-line { width: 1px; height: 40px; background: var(--accent); margin: 0 auto; }
+/* Proyek */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
+.project-card { background: var(--bg-card); border-radius: 12px; overflow: hidden; border: 1px solid rgba(253, 253, 150, 0.1); }
+.project-img-wrapper img { width: 100%; height: 200px; object-fit: cover; }
+.project-content { padding: 1.5rem; }
