@@ -5,61 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Upik Indriani | Electronics Engineering</title>
   <link rel="stylesheet" href="css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-dot">.</span>UI
-      </a>
+      <a href="#hero" class="nav-logo">.UI</a>
       <nav class="nav-links">
-        <a href="#about" class="nav-link">Tentang</a>
-        <a href="#education" class="nav-link">Pendidikan</a>
-        <a href="#experience" class="nav-link">Pengalaman</a>
-        <a href="#skills" class="nav-link">Keahlian</a>
-        <a href="#projects" class="nav-link">Proyek Karya</a>
-        <a href="#contact" class="btn btn-primary nav-btn">Kontak</a>
+        <a href="#about">Tentang</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact" class="nav-cta">Kontak</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
   <!-- HERO SECTION -->
   <section class="hero" id="hero">
-    <canvas class="circuit-canvas" id="circuitCanvas"></canvas>
     <div class="hero-content">
-      <p class="hero-tagline">ELECTRONICS ENGINEERING</p>
-      <h1 class="hero-title">
-        <span class="solid-text">Upik</span>
-        <span class="outline-text">Indriani</span>
-      </h1>
-      <p class="hero-subtitle">Industrial Automation & Control Systems|</p>
-      <p class="hero-desc">Seorang individu yang bermotivasi tinggi dan berorientasi pada detail dengan ketertarikan kuat pada otomasi industri dan sistem kendali. Memiliki pengalaman praktis dalam troubleshooting mesin industri, pemeliharaan PLC, serta pengembangan proyek sistem kontrol.</p>
-      
+      <h1 class="hero-title">Upik Indriani</h1>
+      <p class="hero-subtitle">Industrial Automation & Control Systems</p>
       <div class="hero-cta">
-        <a href="#projects" class="btn btn-primary">Lihat Karya Saya</a>
-        <a href="assets/docs/cv.upik.pdf" download="CV_Upik_Indriani.pdf" class="btn btn-outline">Unduh CV</a>
-      </div>
-
-      <div class="hero-meta">
-        <div class="meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span>Pati, Jawa Tengah</span>
-        </div>
-        <div class="meta-item">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          <span>082324734691</span>
-        </div>
+        <a href="#projects" class="btn-primary">Lihat Karya Saya</a>
+        <a href="assets/docs/cv.upik.pdf" class="btn-ghost">Unduh CV</a>
       </div>
     </div>
     
+    <!-- Elemen Gulir Tidak Bertumpuk -->
     <div class="scroll-indicator">
       <span>gulir</span>
       <div class="scroll-line"></div>
@@ -69,48 +44,37 @@
   <!-- TENTANG SAYA -->
   <section class="section" id="about">
     <div class="about-wrapper">
-      <div class="about-photo-container">
-        <img src="assets/images/upp.jpg" alt="Upik Indriani" class="about-img">
-      </div>
+      <img src="assets/images/upp.jpg" alt="Upik Indriani" class="about-img">
       <div class="about-text-container">
         <span class="project-category">Tentang Saya</span>
         <h2 class="about-heading">Membangun masa depan sirkuit demi sirkuit.</h2>
-        <p class="about-desc">Saya mampu bekerja secara mandiri maupun dalam lingkungan tim, selalu bersemangat untuk mempelajari teknologi baru di bidang elektronika dan siap memberikan solusi inovatif di ranah rekayasa sistem kontrol.</p>
+        <p class="about-desc">Seorang individu yang bermotivasi tinggi dan berorientasi pada detail dengan ketertarikan kuat pada otomasi industri dan sistem kendali.</p>
       </div>
     </div>
   </section>
 
   <!-- PENDIDIKAN -->
   <section class="section" id="education">
-    <h2 class="section-title"><span class="project-category" style="text-align: center; display: block;">Edukasi</span>Latar Belakang Pendidikan</h2>
+    <h2 class="section-title">Latar Belakang Pendidikan</h2>
     <div class="timeline">
-      
-      <!-- Pendidikan 1: POLINES -->
       <div class="timeline-item">
-        <span class="timeline-period">2023 - 2026</span>
         <div class="education-header">
-          <img src="assets/images/logopoline.jpg" alt="Logo POLINES" class="institution-logo">
+          <img src="assets/images/logopolines.jpg" alt="POLINES" class="institution-logo" onerror="this.style.display='none'">
           <div>
             <h3 class="timeline-title">D3 Teknik Elektronika</h3>
-            <p class="timeline-org">Politeknik Negeri Semarang</p>
+            <p class="timeline-org" style="color: var(--accent);">Politeknik Negeri Semarang</p>
           </div>
         </div>
-        <p class="project-desc">Fokus studi mendalam pada rekayasa elektronika industri, sistem otomasi, mikrokontroler, dan sistem kendali kontrol.</p>
       </div>
-      
-      <!-- Pendidikan 2: MA Salafiyah -->
       <div class="timeline-item">
-        <span class="timeline-period">2020 - 2023</span>
         <div class="education-header">
-          <img src="assets/images/logosalafiyah.jpg" alt="Logo MA Salafiyah Kajen" class="institution-logo">
+          <img src="assets/images/logosalafiyah.jpg" alt="MA Salafiyah" class="institution-logo" onerror="this.style.display='none'">
           <div>
             <h3 class="timeline-title">Jurusan MIPA (Sains)</h3>
-            <p class="timeline-org">MA Salafiyah Kajen</p>
+            <p class="timeline-org" style="color: var(--accent);">MA Salafiyah Kajen</p>
           </div>
         </div>
-        <p class="project-desc">Membangun landasan berpikir analitis yang kuat melalui fokus studi matematika dan ilmu pengetahuan alam.</p>
       </div>
-
     </div>
   </section>
 
